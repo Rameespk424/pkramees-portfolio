@@ -24,6 +24,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
   const stack = [...project.frontend, ...project.backend]
 
+  const builtBackend = project.owned.some((l) =>
+    ['schema', 'procedure', 'repository', 'service', 'controller'].includes(l)
+  )
+
   return (
     <article>
       <div className="shell project__head">
@@ -59,16 +63,19 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
       </div>
 
-      {/* Traversal — which layers were personally delivered */}
-      <div className="shell section--tight">
-        <p className="eyebrow" style={{ marginBottom: '0.8rem' }}>
-          Layers delivered
-        </p>
-        <Traversal owned={project.owned} />
-        <p className="traversal__caption" style={{ marginTop: '1rem' }}>
-          Filled markers are the layers I personally delivered on this project.
-        </p>
-      </div>
+      {/* Traversal — which layers were personally delivered.
+          Only meaningful on projects spanning more than one layer. */}
+      {project.owned.length > 1 && (
+        <div className="shell section--tight">
+          <p className="eyebrow" style={{ marginBottom: '0.8rem' }}>
+            Layers delivered
+          </p>
+          <Traversal owned={project.owned} />
+          <p className="traversal__caption" style={{ marginTop: '1rem' }}>
+            Filled markers are the layers I personally delivered on this project.
+          </p>
+        </div>
+      )}
 
       {/* Contributions */}
       <div className="shell section--tight">
@@ -105,7 +112,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           {project.backend.length > 0 && (
             <div>
               <p className="eyebrow" style={{ marginBottom: '0.8rem' }}>
-                Back end and data
+                {builtBackend ? 'Back end and data' : 'Backend it runs on'}
               </p>
               <div className="tags">
                 {project.backend.map((t) => (
@@ -114,6 +121,11 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   </span>
                 ))}
               </div>
+              {!builtBackend && (
+                <p className="traversal__caption" style={{ marginTop: '0.9rem' }}>
+                  Existing backend I built the front end against — not my own work.
+                </p>
+              )}
             </div>
           )}
         </div>

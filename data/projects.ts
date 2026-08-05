@@ -163,23 +163,23 @@ export const projects: Project[] = [
     urlLabel: 'labelo.ai',
     owned: ['interface'],
     featured: true,
-    indexNote: 'Next.js front end for a labeling platform covering text, image, audio and video.',
+    indexNote: 'React and Next.js front end for a labeling platform covering text, image, audio and video.',
     summary: [
       'Labelo is an annotation platform for machine learning teams — text, image, audio, video, and time-series data, labelled collaboratively.',
-      'I built the front end: the marketing surface and a component architecture the product pages could be assembled from.',
+      'I built the front end: the marketing surface and a component architecture the product pages could be assembled from, against an Odoo and Python backend owned by a separate team.',
     ],
     contributions: [
       {
         heading: 'Front end',
         points: [
-          'Built the Next.js front end with TypeScript and Tailwind CSS.',
+          'Built the React and Next.js front end with TypeScript and Tailwind CSS.',
           'Motion design with Framer Motion — scroll-triggered reveals and hover states, kept restrained enough not to fight the content.',
           'A reusable component architecture so new product pages could be composed rather than rebuilt.',
           'Responsive across breakpoints, with attention to how dense feature tables collapse on mobile.',
         ],
       },
     ],
-    frontend: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    frontend: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
     backend: ['Odoo', 'Python'],
   },
   {
@@ -192,22 +192,22 @@ export const projects: Project[] = [
     url: 'https://www.cyllo.com/',
     urlLabel: 'cyllo.com',
     owned: ['interface'],
-    indexNote: 'Next.js front end and a component system on an Odoo backend.',
+    indexNote: 'React and Next.js front end and a component system on an existing Odoo backend.',
     summary: [
-      'A product platform for business software, sitting on an Odoo and Python backend.',
-      'I built the Next.js front end and the component system underneath it, working against the backend team\u2019s data contracts.',
+      'A product platform for business software, sitting on an Odoo and Python backend built and maintained by a separate team.',
+      'I built the React and Next.js front end and the component system underneath it, working against that team\u2019s data contracts.',
     ],
     contributions: [
       {
         heading: 'Front end',
         points: [
-          'Next.js front end in TypeScript with a reusable component architecture.',
+          'React and Next.js front end in TypeScript with a reusable component architecture.',
           'Responsive layouts across breakpoints.',
-          'Worked against Odoo and Python backend contracts, resolving integration mismatches with the backend team.',
+          'Consumed the Odoo and Python backend contracts, resolving integration mismatches with the backend team who owned them.',
         ],
       },
     ],
-    frontend: ['Next.js', 'TypeScript', 'SASS'],
+    frontend: ['React.js', 'Next.js', 'TypeScript', 'SASS'],
     backend: ['Odoo', 'Python'],
   },
   {
@@ -228,8 +228,8 @@ export const projects: Project[] = [
       {
         heading: 'Front end',
         points: [
-          'Delivered front-end development against a Python and Odoo backend.',
-          'Worked closely with the backend team on integration, resolving contract mismatches across the stack.',
+          'Delivered front-end development against an existing Python and Odoo backend owned by another team.',
+          'Worked closely with that backend team on integration, resolving contract mismatches where the front end met their API.',
           'Catalogue and product surfaces built for a buying process with more steps than consumer e-commerce.',
         ],
       },
@@ -247,22 +247,22 @@ export const projects: Project[] = [
     url: 'https://www.tmxintermodal.com/',
     urlLabel: 'tmxintermodal.com',
     owned: ['interface'],
-    indexNote: 'Led the redesign end to end, from design translation to backend integration.',
+    indexNote: 'Led the front-end redesign end to end, from design translation to launch.',
     summary: [
-      'A redesign for an intermodal logistics operator, which I led end to end.',
-      'Leading it meant owning the translation from design through to integration, and being the person the backend team came to when the contract needed to change.',
+      'A redesign for an intermodal logistics operator, whose front end I led end to end.',
+      'Leading it meant owning the translation from design files through to a launched, responsive site — hand-written HTML, CSS, and JavaScript, with no framework in the way.',
     ],
     contributions: [
       {
         heading: 'Front end',
         points: [
           'Led the redesign from design translation through to launch.',
-          'Built responsive React interfaces from design files.',
-          'Partnered with the backend team on integration and data contracts.',
+          'Built responsive layouts from design files in hand-written HTML and CSS.',
+          'JavaScript for interaction and behaviour across the site.',
         ],
       },
     ],
-    frontend: ['React.js', 'JavaScript', 'SASS'],
+    frontend: ['HTML', 'CSS', 'JavaScript'],
     backend: [],
   },
   {
@@ -286,7 +286,7 @@ export const projects: Project[] = [
         points: [
           'Twenty-plus themes built on Bootstrap and published commercially.',
           'Responsive layouts and cross-browser compatibility as a baseline requirement, not a final pass.',
-          'Built to Odoo theming conventions so themes survive platform upgrades.',
+          'Presentation-layer work only — built to Odoo’s theming conventions on top of the existing platform, so themes survive its upgrades.',
         ],
       },
     ],
@@ -306,7 +306,7 @@ export const projects: Project[] = [
     indexNote: 'EMSO Events, CLA Emirates, IMH, Bismi and iBathWorld.',
     summary: [
       'A run of client work in Dubai — events, real estate, healthcare, retail, and a bathroom fittings store.',
-      'Short cycles, direct client contact, and the practical constraint that most of it had to stay editable by people who are not developers.',
+      'Short cycles, direct client contact, and the practical constraint that most of it had to stay editable by people who are not developers. Front end, theming, and configuration on top of existing WordPress and WooCommerce installations.',
     ],
     contributions: [
       {
